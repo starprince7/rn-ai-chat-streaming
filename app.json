@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "output": "server"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "name": "rn-ai-chat-streaming",
+    "slug": "rn-ai-chat-streaming"
+  }
+}
