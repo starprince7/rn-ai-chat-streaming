@@ -16,7 +16,7 @@ Then add an [OpenAI API key](https://platform.openai.com/api-keys) to `.env`:
 OPENAI_API_KEY=sk-proj-...
 ```
 
-Finally you can start the app with `npx expo`.
+Finally you can start the app with `npx expo start`.
 
 ## Deploy
 
