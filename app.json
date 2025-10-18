@@ -1,15 +1,37 @@
 {
   "expo": {
-    "scheme": "acme",
+    "name": "offlineAi",
+    "slug": "offlineai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "scheme": "app_root",
     "userInterfaceStyle": "automatic",
-    "orientation": "default",
     "web": {
       "output": "server"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "react-native-edge-to-edge",
+      {
+        "android": {
+          "parentTheme": "Default",
+          "enforceNavigationBarContrast": false
+        }
+      }
     ],
-    "name": "rn-ai-chat-streaming",
-    "slug": "rn-ai-chat-streaming"
+    "ios": {
+      "bundleIdentifier": "com.starprince.offlineai.app"
+    },
+    "android": {
+      "package": "com.starprince.offlineai.app"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "86c6a655-a74d-4cfb-8c57-1ffbd38bcb6f"
+      }
+    },
+    "owner": "starprince"
   }
 }
