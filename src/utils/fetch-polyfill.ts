@@ -49,19 +49,17 @@ export function wrapFetchWithWindowLocation(
   }
 
   const _fetch = (...props: any[]) => {
-    if (props[0] && typeof props[0] === "string" && props[0].startsWith("/")) {
-      props[0] = new URL(props[0], getOrigin()).toString();
-    } else if (props[0] && typeof props[0] === "object") {
-      if (
-        props[0].url &&
-        typeof props[0].url === "string" &&
-        props[0].url.startsWith("/")
-      ) {
-        props[0].url = new URL(props[0].url, getOrigin()).toString();
+    const arg0 = props[0];
+    if (typeof arg0 === "string" && arg0?.startsWith?.("/")) {
+      props[0] = new URL(arg0, getOrigin()).toString();
+    } else if (arg0 && typeof arg0 === "object") {
+      const url = (arg0 as any).url;
+      if (typeof url === "string" && url?.startsWith?.("/")) {
+        (arg0 as any).url = new URL(url, getOrigin()).toString();
       }
     }
 
-    return fetch(...props);
+    return fetch(...props as any);
   };
 
   _fetch[polyfillSymbol] = true;

@@ -33,6 +33,11 @@ export function ChatWithLocalLLM() {
     messageHistory,
   } = useLLM({
     model: LLAMA3_2_1B,
+    // model: {
+    //   modelSource: "",
+    //   tokenizerConfigSource: "",
+    //   tokenizerSource: "",
+    // }
   });
 
   const [input, setInput] = useState("");

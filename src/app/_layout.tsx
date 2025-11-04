@@ -31,6 +31,13 @@ export default function Layout() {
               headerShown: false, // Hide header for edge-to-edge
             }}
           />
+          <Stack.Screen
+            name="chat"
+            options={{
+              title: "Chat",
+              headerShown: false, // Hide header for edge-to-edge
+            }}
+          />
         </Stack>
       </SafeAreaView>
     </SafeAreaProvider>

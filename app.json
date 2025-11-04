@@ -1,30 +1,33 @@
 {
   "expo": {
-    "name": "offlineAi",
+    "name": "IntelligentPrecious",
     "slug": "offlineai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
-    "scheme": "app_root",
+    "scheme": "app-root",
     "userInterfaceStyle": "automatic",
     "web": {
       "output": "server"
     },
     "plugins": [
       "expo-router",
-      "react-native-edge-to-edge",
-      {
-        "android": {
-          "parentTheme": "Default",
-          "enforceNavigationBarContrast": false
+      [
+        "react-native-edge-to-edge",
+        {
+          "android": {
+            "parentTheme": "Default",
+            "enforceNavigationBarContrast": false
+          }
         }
-      }
+      ]
     ],
     "ios": {
       "bundleIdentifier": "com.starprince.offlineai.app"
     },
     "android": {
-      "package": "com.starprince.offlineai.app"
+      "package": "com.starprince.offlineai.app",
+      "edgeToEdgeEnabled": true
     },
     "extra": {
       "router": {},
